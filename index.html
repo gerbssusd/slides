@@ -10,6 +10,17 @@
 			.col{
 			    flex: 1;
 			}
+			.zoom {
+			  padding: 0px;
+			  transition: transform .2s; /* Animation */
+			  width: 100%;
+			  height: 100%;
+			  margin: 0 auto;
+			}
+			
+			.zoom:hover {
+			  transform: scale(1.8); /* (180% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+			}
 			</style>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -37,9 +48,10 @@
 			                </ul.b>
 			              </div>
 						  <div class="col">
+							  <div class="zoom">
 							 <a target="_blank" href="/aeriesGB/static/images/01gb.png">
 							   <img src="/aeriesGB/static/images/01gb.png" alt="gb1">
-								 </a>
+								 </a></div>
 								</div>
 						  </div>
 					</section>
