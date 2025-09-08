@@ -22,6 +22,36 @@
 			.zoom:hover {
 			  transform: scale(2.8); /* (180% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 			}
+			.wrapper {
+			  position: relative;
+			}
+			
+			.lay1 {
+			  position: relative;
+			  z-index: 1;
+			  border: dashed;
+			  height: 8em;
+			  margin-bottom: 1em;
+			  margin-top: 2em;
+			}
+			.lay2 {
+			  position: absolute;
+			  z-index: 3; /* put .gold-box above .green-box and .dashed-box */
+			  background: gold;
+			  width: 80%;
+			  left: 60px;
+			  top: 3em;
+			}
+			.lay3 {
+			  position: absolute;
+			  z-index: 2; /* put .green-box above .dashed-box */
+			  background: lightgreen;
+			  width: 20%;
+			  left: 65%;
+			  top: -25px;
+			  height: 7em;
+			  opacity: 0.9;
+			}
 			</style>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -53,15 +83,15 @@
 			                </ul.b>
 			              </div>
 				  <div class="col">
-					<div style="position: relative>
+					<div "class=wrapper">
 					 <a target="_blank" href="https://www.cde.ca.gov/be/st/ss/index.asp">
-					   <img style="position: relative; z-index: 0;" src="./images/2-1.png" alt="gb1">
+					   <img class="lay1" src="./images/2-1.png" alt="gb1">
 						 </a>
 					<a target="_blank" href="https://www.cde.ca.gov/be/st/ss/index.asp">
-					   <img style="position: absolute; left: 30%; z-index: 1;" src="./images/2-2.png" alt="gb2">
+					   <img "class="lay2" src="./images/2-2.png" alt="gb2">
 						 </a>
 					<a target="_blank" href="https://www.cde.ca.gov/re/mo/castandards.asp">
-					   <img style="position: absolute; left: 60%; z-index: 2;" src="./images/2-3.png" alt="gb3">
+					   <img class="lay3" src="./images/2-3.png" alt="gb3">
 						 </a>
 						</div>
 				  </div>
